@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Header() {
+  const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("header nav a");
@@ -30,23 +32,35 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Close menu when clicking a nav link
+  const handleNavClick = () => {
+    setIsActive(false);
+  };
 
   return (
     <header className="header">
       <a href="#home" className="logo">
         Portfolio
       </a>
-      <i className="bx bx-menu-alt-left bx-flip-horizontal bx-tada" id="menu-icon"></i>
-      <nav className="nav">
-        <a href="#home" className="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+
+      {/* Hamburger Menu Icon */}
+      <i
+        className="bx bx-menu-alt-left bx-flip-horizontal bx-tada"
+        id="menu-icon"
+        onClick={() => setIsActive(!isActive)}
+      ></i>
+
+      {/* Nav Links */}
+      <nav className={`nav ${isActive ? "active" : ""}`}>
+        <a href="#home" className="active" onClick={handleNavClick}>Home</a>
+        <a href="#about" onClick={handleNavClick}>About</a>
+        <a href="#services" onClick={handleNavClick}>Services</a>
+        <a href="#portfolio" onClick={handleNavClick}>Portfolio</a>
       </nav>
     </header>
   );
