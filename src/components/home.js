@@ -14,7 +14,7 @@ function Home() {
         </p>
         <div className="social-media">
           <a href="https://www.facebook.com/profile.php?id=100087949763258"><i className="bx bxl-facebook-square"></i></a>
-          <a href="https://www.linkedin.com/in/mohammed-raiyan-f"><i className="bx bxl-linkedin-square"></i></a>
+          <a href="https://www.linkedin.com/in/mohammed-raiyan-1aa620385/"><i className="bx bxl-linkedin-square"></i></a>
           <a href="mailto:mohammedraiya325@gmail.com"><i className="bx bx-envelope"></i></a>
           <a href="https://github.com/MohammedRaiyan-coder"><i className="bx bxl-git"></i></a>
         </div>
