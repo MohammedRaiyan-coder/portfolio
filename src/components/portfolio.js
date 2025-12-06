@@ -23,6 +23,14 @@ function Portfolio() {
             <a className="mm" href="https://dental-clinic-website-gules.vercel.app/#home"><i className="bx bx-link-alt"></i></a>
           </div>
         </div>
+        <div className="portfolio-box">
+          <img src="images/calculator.png" alt="Calculator App" />
+          <div className="portfolio-layer">
+            <h4 className="mm">Calculator App</h4>
+            <p>A responsive web calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations with an interactive UI, demonstrating clean layout, and user-friendly design.</p>
+            <a className="mm" href="https://calculator-rho-indol-34.vercel.app/"><i className="bx bx-link-alt"></i></a>
+          </div>
+        </div>
 
       </div>
     </section>
